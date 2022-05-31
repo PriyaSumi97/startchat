@@ -1,0 +1,40 @@
+<style>
+    body{
+        background-color: darkgray;
+    }
+       .userlist {
+           list-style-type: none;
+           background-color: lightgray;
+           width:1300px;
+           max-width: 100%;
+           padding: 20px 30px;
+           margin-left: -40px;
+           margin-top:10px;
+    }
+    
+        .userlist:hover{
+           background-color: darkgray;
+           position: relative;
+           z-index: 2;
+
+        }
+        .user_head{
+            margin-top:20px;
+            color:black;
+            margin-left: 10px;
+
+        }
+       
+</style>
+<div>
+    <h3 class="user_head">DIRECT MESSAGES</h3>
+        <ul *ngFor="let arr of array" >
+            <div *ngIf="arr.username!=loginuser">
+               <li class="userlist"><a (click)= "getusers(arr.username)" routerLink="/users/chat/id={{arr.username}}">{{arr.username}}</a></li>
+            </div>
+            </ul>
+        <!--ul>
+            <li class="userlist"><%=username%></li>
+        </ul-->
+</div>
+<router-outlet></router-outlet>

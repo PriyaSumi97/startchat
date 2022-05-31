@@ -1,0 +1,10 @@
+.example-spacer{
+    color:aqua;
+}
+.mat-elevation-z5{
+    position: relative;
+    z-index: 2;
+}
+mat-nav-list a:hover{
+    color: black;
+}

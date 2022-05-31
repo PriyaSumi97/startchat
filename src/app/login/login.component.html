@@ -1,0 +1,118 @@
+<style>
+  body {
+    background-color: white;
+    text-align: center;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    max-width: 400px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  #button {
+    background-color: aqua;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    max-width: 400px;
+    width: 100%;
+  }
+
+  #button:hover {
+    box-shadow: 1px 1px 2px 2px #808588;
+  }
+  .container {
+    padding: 16px;
+  }
+  .section1 {
+    max-width: 300px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+    box-shadow: 1px 1px 5px 5px #808588;
+    background: lightgray;
+    padding: 10px;
+    display: inline-block;
+  }
+  #loginuser{
+    font-size: 20px;
+    color:red;
+  }
+  #regbutton{
+    margin-top: 0px;
+    margin-left: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+    padding: 10px;
+    display: inline-block;
+    cursor: pointer;
+  }
+  .loginuser{
+    margin-top: 10px;
+    margin-left: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+    padding: 10px;
+    display: inline-block;
+  }
+  .h4{
+    margin-top: 0px;
+    margin-left: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+    padding: 0px;
+    display: inline-block;
+  }
+  h2{
+     color: black;
+     text-shadow: 2px 2px 4px darkgray;
+     margin-top: 60px;
+     margin-left: auto;
+     margin-bottom: auto;
+     margin-right: auto;
+     padding: 0px;
+     text-align: center;
+  }
+</style>
+<h2><b>USER LOGIN</b></h2>
+<div class="section1">
+  <!-- <form [formGroup]="form" id="login_form" > -->
+    <form>
+    <div class="container">
+      <label for="uname"><b>Username</b></label
+      ><br />
+      <input
+        type="text"
+        id="username"
+        #name
+        placeholder="Enter Username"
+        autocomplete="off"
+      /><br />
+
+
+      <label for="psw"><b>Password</b></label
+      ><br />
+      <input
+        type="password"
+        id="password"
+        #password
+        placeholder="Enter Password"
+      /><br />
+
+      <button type="submit" id="button" (click)="getvalue(name.value, password.value)">Submit</button>
+    </div>
+  </form>
+</div>
+<b  class="loginuser"><div id="loginuser"></div></b>
+<h4 class="h4">Want to Register?</h4>
+<a id="regbutton" routerLink="/register">Register here</a>
+

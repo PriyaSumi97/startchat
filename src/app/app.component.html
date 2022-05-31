@@ -1,0 +1,18 @@
+<mat-toolbar style="background-color: aqua" class="mat-elevation-z5">
+    <span>ChAt ApP</span>
+    <span class="example-spacer"></span>
+</mat-toolbar>
+<mat-sidenav-container>
+    <mat-sidenav style= "background-color: aqua;" mode="side" opened>
+<mat-nav-list style= "min-width:150px; width:100%" *ngIf="!user_profile">
+    <!-- <a mat-list-item routerLink="login"><mat-icon>lock_open</mat-icon>Login</a> -->
+    <a mat-list-item routerLink="users"><mat-icon>account_circle</mat-icon>Users</a>
+    
+</mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+         <p style="height:88vh;">
+            <router-outlet></router-outlet>
+        </p>
+    </mat-sidenav-content>
+</mat-sidenav-container>

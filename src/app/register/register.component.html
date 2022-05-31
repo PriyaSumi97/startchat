@@ -1,0 +1,110 @@
+
+        <style>
+            body{
+                background-color: white;
+            }
+          
+            input[type=text], input[type=password] {
+                 max-width: 400px;
+                 width: 100%;
+                 padding: 12px 20px;
+                 margin: 8px 0;
+                 display: inline-block;
+                 border: 1px solid #ccc;
+                 box-sizing: border-box;
+            }
+
+            #button {
+               background-color: aqua;
+               color: black;
+               padding: 14px 20px;
+               margin: 8px 0;
+               border: none;
+               cursor: pointer;
+               max-width: 400px;
+               width: 100%;
+           }
+
+            #button:hover {
+                box-shadow: 1px 1px 2px 2px #808588;
+             }
+             .container {
+                 padding: 16px;
+             }
+             .section1{
+                max-width: 250px;
+                margin-top: 10px;
+                margin-left: auto;
+                margin-bottom: auto;
+                margin-right: auto;
+                box-shadow: 1px 1px 5px 5px #808588;
+                background: lightgray;
+                padding: 10px;
+             }
+             .login_user {
+                   color:black;
+                   padding: 12px 20px;
+                   margin-left: 0px;
+                   margin-top:0px;
+                   width:700px;
+                   max-width: 100%;
+            }
+            
+                .login_user:hover{
+                   background-color: white;
+
+                }
+                .user_head{
+                    color:aqua;
+                }
+                #regbutton{
+                   margin-top: 10px;
+                   padding: 0px;
+                   cursor: pointer;
+                   text-align: center;
+               }
+               .h4{
+                   margin-top: 0px;
+                   margin-left: auto;
+                   margin-bottom: auto;
+                   margin-right: auto;
+                   padding: 0px;
+                   text-align: center;
+  }
+               h2{
+                   color: black;
+                   text-shadow: 2px 2px 4px darkgray;
+                   margin-top: 60px;
+                   margin-left: auto;
+                   margin-bottom: auto;
+                   margin-right: auto;
+                   padding: 0px;
+                   text-align: center;
+  }
+              #reg_user{
+                   margin-top: 10px;
+                   padding: 10px;
+                   margin-left: auto;
+                   margin-bottom: auto;
+                   margin-right: auto;
+                   text-align: center;
+                   color: #FF007F;
+  }
+     </style>
+        <h2><b>USER REGISTER</b></h2>
+        <div class="section1">
+         <form id="login_form" method="post" action="/loginuser">
+            <div class="container">
+              <label for="uname"><b>Username</b></label><br>
+              <input type="text" #name id="name" placeholder="Enter Username" name="username" autocomplete="off" required><br>
+          
+              <label for="psw"><b>Password</b></label><br>
+              <input type="password" #password id="password" placeholder="Enter Password" name="password" required><br>
+                  
+              <button type="submit" id="button" (click)="getvalue(name, password)">Register</button>
+            </div>
+          </form>
+         </div>
+         <h2 id="reg_user"><b></b></h2>
+         <h4 class="h4">Already registered?</h4>
+        <p id="regbutton"><a routerLink="/login">Login here</a></p>
