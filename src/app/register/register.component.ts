@@ -18,7 +18,7 @@ export class RegisterComponent implements OnInit {
     name.value="";
     password.value="";
     let reg_user= { username: this.username, password: this.userpassword}
-    this.http.post("http://3.112.59.138/register", reg_user).subscribe((result:any)=>{
+    this.http.post("http://ddp.in.net/register", reg_user).subscribe((result:any)=>{
       if(result.message=="true"){
            this.router.navigate(['/users'])
            //console.log(result.result.username)

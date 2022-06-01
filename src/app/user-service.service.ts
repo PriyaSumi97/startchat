@@ -20,10 +20,10 @@ export class UserServiceService {
   }
   apiCall()
   {
-    return this.http.get(`http://3.112.59.138/userslist`);
+    return this.http.get(`http://ddp.in.net/userslist`);
   }
    getReceiver(sender:any){
-     return this.http.get(`http://3.112.59.138/users/chat/id=${this.user}?sender=${sender}`, {responseType: 'json'});
+     return this.http.get(`http://ddp.in.net/users/chat/id=${this.user}?sender=${sender}`, {responseType: 'json'});
    }
   get user_profile(){
     return localStorage.getItem('users');
@@ -38,7 +38,7 @@ export class UserServiceService {
 
  /* loginUser(username:any, password:any)
   {
-    return this.http.post(`http://3.112.59.138/loginUser`, {username:username, password:password});
+    return this.http.post(`http://ddp.in.net/loginUser`, {username:username, password:password});
   }*/
   
 }
