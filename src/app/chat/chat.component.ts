@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import io from 'socket.io-client';
-const SOCKET_ENDPOINT= 'http://ddp.in.net';
+const SOCKET_ENDPOINT= 'https://ddp.in.net';
 import { UserServiceService } from '../user-service.service';
 
 @Component({
@@ -14,7 +14,7 @@ export class ChatComponent implements OnInit {
   message: any;
   dbmessage: any=[];
   appendMessage: any;
-  private url = 'http://ddp.in.net/';
+  private url = 'https://ddp.in.net/';
   //receiver:any=[];
   receiver: any;
   myreceiver:any;

@@ -17,13 +17,13 @@ export class LoginComponent implements OnInit {
   profile: any;
   loginValue: any;
   loginuser:any;
-  private url = 'http://ddp.in.net/';
+  private url = 'https://ddp.in.net/';
   getvalue(name:any,password:any){
     this.loginuser=name;
     this.user.loginuser(this.loginuser);
     //console.log(name, password)
     let loginuser= { username: name, password: password}
-    this.http.post("http://ddp.in.net/loginuser", loginuser).subscribe((result:any)=>{
+    this.http.post("https://ddp.in.net/loginuser", loginuser).subscribe((result:any)=>{
       if(result.message!="fail"){
            localStorage.setItem('users', result.result.username)
            this.router.navigate(['/users', {username:result.result.username }])
@@ -48,7 +48,7 @@ export class LoginComponent implements OnInit {
  
   //  onSubmit(data:any){
   //    let loginuser= { username:'priya', password: '123'}
-  //      this.http.post("http://ddp.in.net/loginuser", data).subscribe((result:any)=>{
+  //      this.http.post("https://ddp.in.net/loginuser", data).subscribe((result:any)=>{
   //       localStorage.setItem('users', result.result.username)
   //       console.log(result.result.username)
   //   })
